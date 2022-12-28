@@ -17,7 +17,7 @@ pipeline {
                 echo 'welcome to jenkins'
                 echo "${XYZ}"
                 echo "${ABC}"
-                sh echo SSH
+                echo "${SSH}"
 
             }
         }
