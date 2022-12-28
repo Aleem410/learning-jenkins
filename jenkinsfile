@@ -1,11 +1,18 @@
 pipeline {
     agent any
-
+    environment {
+      ABC="abc"
+ }
     stages {
         stage('NEW') {
+        environment {
+         XYZ="xzy"
+        }
             steps {
                 echo 'Hello World'
                 echo 'welcome to jenkins'
+                echo "${XYZ}"
+
             }
         }
     }
