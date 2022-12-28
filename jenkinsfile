@@ -2,22 +2,22 @@ pipeline {
     agent any
     environment {
       ABC="abc"
-
+    environment {
+      SSH = credentials('ssh')
+             }
  }
     stages {
         stage('NEW') {
         environment {
          XYZ="xzy"
-        environment {
-         ssh = credentials('ssh')
-         }
+
         }
             steps {
                 echo 'Hello World'
                 echo 'welcome to jenkins'
                 echo "${XYZ}"
                 echo "${ABC}"
-                echo "${ssh}"
+                echo "${SSH}"
 
             }
         }
