@@ -9,7 +9,7 @@ pipeline {
         environment {
          XYZ="xzy"
         environment {
-         SSH = credentials('ssh')
+         ssh = credentials('ssh')
          }
         }
             steps {
@@ -17,7 +17,7 @@ pipeline {
                 echo 'welcome to jenkins'
                 echo "${XYZ}"
                 echo "${ABC}"
-                echo "${SSH}"
+                echo "${ssh}"
 
             }
         }
