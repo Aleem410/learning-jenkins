@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
       ABC="abc"
-      echo "${ABC}"
+
  }
     stages {
         stage('NEW') {
@@ -13,6 +13,7 @@ pipeline {
                 echo 'Hello World'
                 echo 'welcome to jenkins'
                 echo "${XYZ}"
+                echo "${ABC}"
 
             }
         }
