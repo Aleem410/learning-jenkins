@@ -8,7 +8,7 @@ pipeline {
         stage('NEW') {
         environment {
          XYZ="xzy"
-         environment {
+        environment {
           SSH = credentials('SSH')
          }
         }
