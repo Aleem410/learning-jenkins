@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
       ABC="abc"
+      echo $"{ABC}"
  }
     stages {
         stage('NEW') {
