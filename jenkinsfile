@@ -1,32 +1,19 @@
-// pipeline {
-//     agent any
-//
-//     stages {
-//         stage('NEW') {
-//             steps {
-//                 echo 'Hello World'
-//             }
-//         }
-//     }
-// }
-
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
+        stage('NEW') {
             steps {
-                echo Build
-            }
-        }
-        stage('Test') {
-            steps {
-                echo test
-            }
-        }
-        stage('Deploy') {
-            steps {
-               echo deploy
+                echo 'Hello World'
             }
         }
     }
+    post {
+      always {
+        echo 'OK'
+      }
+    }
 }
+
+
+
