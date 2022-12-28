@@ -4,7 +4,7 @@ pipeline {
       ABC="abc"
     environment {
       SSH_PASSWORD = credentials("ssh")
-             }
+    }
  }
     stages {
         stage('NEW') {
