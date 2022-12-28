@@ -9,7 +9,7 @@ pipeline {
         environment {
          XYZ="xzy"
         environment {
-         SSH = credentials('SSH')
+         SSH = credentials('ssh')
          }
         }
             steps {
