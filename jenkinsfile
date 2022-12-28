@@ -3,7 +3,7 @@ pipeline {
     environment {
       ABC="abc"
     environment {
-      SSH_PASSWORD=credentials("ssh")
+      SSH=credentials("ssh")
     }
  }
     stages {
@@ -17,7 +17,7 @@ pipeline {
                 echo 'welcome to jenkins'
                 echo "${XYZ}"
                 echo "${ABC}"
-                echo "${SSH_PASSWORD}"
+                echo "${SSH}"
 
             }
         }
