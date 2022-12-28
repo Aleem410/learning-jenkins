@@ -8,12 +8,16 @@ pipeline {
         stage('NEW') {
         environment {
          XYZ="xzy"
+         environment {
+          ROOT_PASSWORD = credentials('root')
+         }
         }
             steps {
                 echo 'Hello World'
                 echo 'welcome to jenkins'
                 echo "${XYZ}"
                 echo "${ABC}"
+                sh echo ROOT_PASSWORD
 
             }
         }
