@@ -18,6 +18,7 @@ pipeline {
                 echo 'welcome to jenkins'
                 echo "${XYZ}"
                 echo "${ABC}"
+                echo "${APP_URL}"
 
 
             }
