@@ -5,6 +5,7 @@ pipeline {
         stage('NEW') {
             steps {
                 echo 'Hello World'
+                echo 'welcome to jenkins'
             }
         }
     }
