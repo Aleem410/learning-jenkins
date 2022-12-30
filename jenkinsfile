@@ -7,10 +7,9 @@ pipeline {
       ABC="abc"
  }
     stages {
-        stage('NEW') {
+      stage('NEW') {
         environment {
          XYZ="xzy"
-
         }
             steps {
                 echo 'Hello World'
@@ -21,18 +20,16 @@ pipeline {
 
             }
         }
-    }
-         stage('Example') {
+        stage('Example') {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
                 submitter "admin"
-
-                  }
                 }
             steps {
                 echo "Hello, nice to meet you."
-                }
+            }
+        }
     post {
       always {
         echo 'OK'
