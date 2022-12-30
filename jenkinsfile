@@ -8,6 +8,11 @@ pipeline {
  }
     stages {
       stage('NEW') {
+      when {
+      expression {
+      params.APP_URL == google.com
+      }
+       }
         environment {
          XYZ="xzy"
         }
