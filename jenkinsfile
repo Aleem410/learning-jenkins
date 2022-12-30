@@ -5,7 +5,7 @@ pipeline {
         }
     triggers {
 //     cron('0 * * * *')
-    triggers { pollSCM('* * * * *') }
+       pollSCM('* * * * *') }
     }
     environment {
       ABC="abc"
