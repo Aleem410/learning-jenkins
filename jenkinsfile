@@ -5,7 +5,7 @@ pipeline {
         }
     triggers {
 //     cron('0 * * * *')
-       pollSCM('* * * * *')
+//        pollSCM('* * * * *')
     }
     environment {
       ABC="abc"
@@ -27,6 +27,16 @@ pipeline {
             }
         }
     }
+
+    stages {
+            stage('Example') {
+                input {
+                    message "Should we continue?"
+                    ok "Yes, we should."
+                    submitter "admin"
+
+                    }
+                }
     post {
       always {
         echo 'OK'
