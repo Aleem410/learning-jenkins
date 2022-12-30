@@ -2,8 +2,11 @@ pipeline {
     agent any
     parameters {
             string(name: 'APP_URL', defaultValue: '', description: 'APP URL')
-
         }
+    triggers {
+//     cron('0 * * * *')
+    triggers { pollSCM('* * * * *') }
+    }
     environment {
       ABC="abc"
  }
