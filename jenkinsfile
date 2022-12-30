@@ -3,10 +3,6 @@ pipeline {
     parameters {
             string(name: 'APP_URL', defaultValue: '', description: 'APP URL')
         }
-    triggers {
-//     cron('0 * * * *')
-//        pollSCM('* * * * *')
-    }
     environment {
       ABC="abc"
  }
@@ -22,7 +18,6 @@ pipeline {
                 echo "${XYZ}"
                 echo "${ABC}"
                 echo "${APP_URL}"
-
 
             }
         }
