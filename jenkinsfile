@@ -1,44 +1,72 @@
-pipeline {
-    agent any
-    parameters {
-            string(name: 'APP_URL', defaultValue: '', description: 'APP URL')
-        }
-    environment {
-      ABC="abc"
- }
-    stages {
-      stage('NEW') {
-      when {
-       expression {
-         params.APP_URL == "google.com"
-      }
-    }
-        environment {
-         XYZ="xzy"
-        }
-            steps {
-                echo 'Hello World'
-                echo 'welcome to jenkins'
-                echo "${XYZ}"
-                echo "${ABC}"
-                echo "${APP_URL}"
+// pipeline {
+//     agent any
+//     parameters {
+//             string(name: 'APP_URL', defaultValue: '', description: 'APP URL')
+//         }
+//     environment {
+//       ABC="abc"
+//  }
+//     stages {
+//       stage('NEW') {
+//       when {
+//        expression {
+//          params.APP_URL == "google.com"
+//       }
+//     }
+//         environment {
+//          XYZ="xzy"
+//         }
+//             steps {
+//                 echo 'Hello World'
+//                 echo 'welcome to jenkins'
+//                 echo "${XYZ}"
+//                 echo "${ABC}"
+//                 echo "${APP_URL}"
+//
+//             }
+//         }
+//         stage('Example') {
+//             input {
+//                 message "Should we continue?"
+//                 ok "Yes, we should."
+//                 submitter "admin"
+//                 }
+//             steps {
+//                 echo "Hello, nice to meet you."
+//             }
+//         }
+//     }
+//     post {
+//       always {
+//         echo 'OK'
+//       }
+//     }
+//  }
 
-            }
-        }
-        stage('Example') {
-            input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "admin"
-                }
-            steps {
-                echo "Hello, nice to meet you."
-            }
-        }
+pipeline {
+ agent any
+  stages {
+   stage('one'){
+    steps {
+      echo 'one'
     }
-    post {
-      always {
-        echo 'OK'
+  }
+  stage('Two'){
+      steps {
+        echo 'Two'
       }
     }
+
+   stage('Three'){
+         steps {
+           echo 'Three'
+         }
+       }
+
+    stage('Four'){
+         steps {
+           echo 'Four'
+         }
+      }
  }
+}
